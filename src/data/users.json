@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "גיל",
+    "profilePic": "src/assets/images/גיל.jpg",
+    "lastMessageTime": "2025-06-30T20:30:00Z"
+  },
+  {
+    "id": 2,
+    "name": "עינת",
+    "profilePic": "src/assets/images/עינת.jpg",
+    "lastMessageTime": "2025-06-29T18:45:00Z"
+  },
+  {
+    "id": 3,
+    "name": "דן",
+    "profilePic": "src/assets/images/דן.jpg",
+    "lastMessageTime": "2025-06-28T14:20:00Z"
+  },
+  {
+    "id": 4,
+    "name": "אדל",
+    "profilePic": "src/assets/images/אדל.jpg",
+    "lastMessageTime": "2025-06-27T10:15:00Z"
+  },
+  {
+    "id": 5,
+    "name": "אביב",
+    "profilePic": "src/assets/images/אביב.jpg",
+    "lastMessageTime": "2025-06-25T16:00:00Z"
+  }
+]
