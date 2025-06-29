@@ -1,4 +1,17 @@
+import styles from "./UserListItem.module.css";
+
 function UserListItem({ user }) {
-  return <div></div>;
+  return (
+    <div className={styles.userListItemContainer}>
+      <img
+        src={user.profilePic}
+        alt={user.name}
+        className={styles.profilePic}
+      />
+      <div>
+        <h3>{user.name}</h3>
+      </div>
+    </div>
+  );
 }
 export default UserListItem;

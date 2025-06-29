@@ -4,3 +4,20 @@
   flex-direction: column;
   background-color: red;
 }
+
+.header {
+  background: blue;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.usersListContainer {
+  flex: 1;
+  overflow-y: auto;
+}

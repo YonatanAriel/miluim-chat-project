@@ -8,10 +8,10 @@ function UserList() {
 
   return (
     <div className={styles.container}>
-      <div>
-        <h1>צ'אט</h1>
+      <div className={styles.header}>
+        <h1 className={styles.heading}>צ'אט</h1>
       </div>
-      <div>
+      <div className={styles.usersListContainer}>
         {users.map((user) => (
           <UserListItem key={user.id} user={user} />
         ))}
