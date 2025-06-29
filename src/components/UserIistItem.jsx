@@ -8,8 +8,8 @@ function UserListItem({ user }) {
         alt={user.name}
         className={styles.profilePic}
       />
-      <div>
-        <h3>{user.name}</h3>
+      <div className={styles.userInfo}>
+        <h3 className={styles.userName}>{user.name}</h3>
       </div>
     </div>
   );
