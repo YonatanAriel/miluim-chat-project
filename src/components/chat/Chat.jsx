@@ -6,7 +6,7 @@ import MessageInput from "../messageInput/MessageInput";
 import { scrollToBottom } from "../../utils/scrollToBottom";
 import { getRandomMessage } from "../../utils/getRandomMessages";
 
-function Chat({ handleBackButtonClick }) {
+function Chat({ handleBackButtonClick, user }) {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
   const messagesBottomRef = useRef(null);
@@ -37,10 +37,16 @@ function Chat({ handleBackButtonClick }) {
     <div className={styles.container}>
       <div className={styles.header}>
         <BackButton onClick={handleBackButtonClick} />
+        <img
+          src={user.profilePic}
+          alt={user.name}
+          className={styles.userProfilePic}
+        />
+        <h2>{user.name}</h2>
       </div>
       <div className={styles.messagesContainer}>
         {messages.map((message) => (
-          <Message message={message} />
+          <Message message={message} key={message.id} />
         ))}
         <div ref={messagesBottomRef} />
       </div>
