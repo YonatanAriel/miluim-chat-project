@@ -42,6 +42,6 @@
 
 @media screen and (max-width: 550px) {
   .userListItemContainer {
-    border: none;
+    /* border: none; */
   }
 }

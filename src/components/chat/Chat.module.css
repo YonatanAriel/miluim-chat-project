@@ -13,7 +13,6 @@
   border: solid 1px white;
   border-bottom: none;
   border-radius: 9px 9px 0 0;
-
   color: white;
   padding: 1rem;
   display: flex;
@@ -37,5 +36,13 @@
     min-width: unset;
     margin: 0 auto;
     border-radius: 0;
+  }
+  .header {
+    border-radius: 0;
+    border: none;
+  }
+  .messagesContainer {
+    border-right: none;
+    border-left: none;
   }
 }

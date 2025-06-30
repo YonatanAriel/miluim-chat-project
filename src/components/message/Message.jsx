@@ -10,7 +10,11 @@ function Message({ message }) {
   );
 
   return (
-    <div className={styles.message}>
+    <div
+      className={`${styles.message} ${
+        message.sender === "me" ? styles.sent : styles.received
+      }`}
+    >
       <div className={styles.messageBubble}>{message.text}</div>
       <div className={styles.messageTime}>{formattedTime}</div>
     </div>

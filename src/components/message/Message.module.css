@@ -16,3 +16,11 @@
   margin-top: 0.25rem;
   padding: 0 0.5rem;
 }
+
+.message.sent {
+  align-items: flex-end;
+}
+
+.message.received {
+  align-items: flex-start;
+}

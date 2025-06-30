@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Message from "../message/Message";
 import MessageInput from "../messageInput/MessageInput";
 import { scrollToBottom } from "../../utils/scrollToBottom";
+import { getRandomMessage } from "../../utils/getRandomMessages";
 
 function Chat({ handleBackButtonClick }) {
   const [messages, setMessages] = useState([]);
@@ -25,6 +26,11 @@ function Chat({ handleBackButtonClick }) {
     };
     setMessages((prev) => [...prev, userMessage]);
     setNewMessage("");
+
+    const randomMessage = getRandomMessage();
+    setTimeout(() => {
+      setMessages((prev) => [...prev, randomMessage]);
+    }, 1000 + Math.random() * 2000);
   };
 
   return (
