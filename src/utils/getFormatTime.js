@@ -1,5 +1,8 @@
 export const getFormatTime = (timestamp) => {
   const messageDate = new Date(timestamp);
+  if (isNaN(messageDate)) {
+    return "";
+  }
   const today = new Date();
   const yesterday = new Date(today);
   yesterday.setDate(yesterday.getDate() - 1);

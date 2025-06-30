@@ -39,6 +39,12 @@ function Chat({ handleBackButtonClick, user }) {
     saveMessagesToLS(updatedMessages);
     setNewMessage("");
 
+    const savedTimes = JSON.parse(
+      localStorage.getItem("lastMessageTimes") || "{}"
+    );
+    savedTimes[user.id] = new Date().toISOString();
+    localStorage.setItem("lastMessageTimes", JSON.stringify(savedTimes));
+
     const randomMessage = getRandomMessage();
     setTimeout(() => {
       setMessages((prev) => [...prev, randomMessage]);
