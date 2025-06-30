@@ -12,12 +12,20 @@ function App() {
     setCurrentScreen("chat");
   };
 
+  const handleBackButtonClick = () => {
+    setCurrentScreen("userList");
+    setSelectedUser(null);
+  };
+
   return (
     <div className={styles.appConatiner}>
       {currentScreen === "userList" ? (
         <UserList onUserClick={handleUserSelect} />
       ) : (
-        <Chat user={selectedUser} />
+        <Chat
+          user={selectedUser}
+          handleBackButtonClick={handleBackButtonClick}
+        />
       )}
     </div>
   );
