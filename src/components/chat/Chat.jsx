@@ -24,6 +24,7 @@ function Chat({ handleBackButtonClick }) {
       timestamp: new Date().toISOString(),
     };
     setMessages((prev) => [...prev, userMessage]);
+    setNewMessage("");
   };
 
   return (

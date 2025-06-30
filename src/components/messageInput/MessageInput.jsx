@@ -1,4 +1,5 @@
 import styles from "./messageInput.module.css";
+import { IoSend } from "react-icons/io5";
 
 function MessageInput({ newMessage, setNewMessage, sendMessage }) {
   return (
@@ -11,7 +12,7 @@ function MessageInput({ newMessage, setNewMessage, sendMessage }) {
         placeholder="הודעה חדשה"
       />
       <button className={styles.inputButton} onClick={sendMessage}>
-        שלח
+        <IoSend size={20} />{" "}
       </button>
     </div>
   );
