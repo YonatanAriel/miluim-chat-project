@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import styles from "./userListItem/UserListItem.module.css";
+import styles from "./UserListItem.module.css";
 import { getFormatTime } from "../utils/getFormatTime";
 
 function UserListItem({ user }) {

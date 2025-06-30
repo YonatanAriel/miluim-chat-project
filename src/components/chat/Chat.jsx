@@ -1,6 +1,7 @@
 import styles from "./Chat.module.css";
-import { IoMdArrowRoundBack } from "react-icons/io";
+import BackButton from "../backButton/BackButton";
 import { useState } from "react";
+import Message from "../message/Message";
 
 function Chat({ handleBackButtonClick }) {
   const [messages, setMessages] = useState([]);
@@ -8,9 +9,13 @@ function Chat({ handleBackButtonClick }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <button className={styles.backButton} onClick={handleBackButtonClick}>
-          <IoMdArrowRoundBack />
-        </button>
+        <BackButton onClick={handleBackButtonClick} />
+      </div>
+      <div className={styles.messagesContainer}>
+        {messages.map((message) => (
+          <Message message={message} />
+        ))}
+        <div />
       </div>
     </div>
   );

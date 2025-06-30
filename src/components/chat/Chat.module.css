@@ -13,8 +13,9 @@
   gap: 1rem;
 }
 
-.backButton {
-  background: none;
-  border: none;
-  cursor: pointer;
+.messagesContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: red;
 }
