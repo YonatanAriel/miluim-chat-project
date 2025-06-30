@@ -2,31 +2,31 @@
   {
     "id": 1,
     "name": "גיל",
-    "profilePic": "src/assets/images/גיל.jpg",
+    "profilePic": "/assets/images/גיל.jpg",
     "lastMessageTime": ""
   },
   {
     "id": 2,
     "name": "עינת",
-    "profilePic": "src/assets/images/עינת.jpg",
+    "profilePic": "/assets/images/עינת.jpg",
     "lastMessageTime": ""
   },
   {
     "id": 3,
     "name": "דן",
-    "profilePic": "src/assets/images/דן.jpg",
+    "profilePic": "/assets/images/דן.jpg",
     "lastMessageTime": ""
   },
   {
     "id": 4,
     "name": "אדל",
-    "profilePic": "src/assets/images/אדל.jpg",
+    "profilePic": "/assets/images/אדל.jpg",
     "lastMessageTime": ""
   },
   {
     "id": 5,
     "name": "אביב",
-    "profilePic": "src/assets/images/אביב.jpg",
+    "profilePic": "/assets/images/אביב.jpg",
     "lastMessageTime": ""
   }
 ]
