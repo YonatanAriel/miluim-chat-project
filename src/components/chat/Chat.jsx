@@ -15,6 +15,15 @@ function Chat({ handleBackButtonClick, user }) {
     scrollToBottom(messagesBottomRef);
   }, [messages]);
 
+  useEffect(() => {
+    const LSMessages = localStorage.getItem(`chat_${user.id}`);
+    if (LSMessages) setMessages(JSON.parse(LSMessages));
+  }, [user.id]);
+
+  const saveMessagesToLS = (updatedMessages) => {
+    localStorage.setItem(`chat_${user.id}`, JSON.stringify(updatedMessages));
+  };
+
   const sendMessage = () => {
     if (newMessage.trim() === "") return;
 
@@ -24,7 +33,10 @@ function Chat({ handleBackButtonClick, user }) {
       sender: "me",
       timestamp: new Date().toISOString(),
     };
-    setMessages((prev) => [...prev, userMessage]);
+
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
+    saveMessagesToLS(updatedMessages);
     setNewMessage("");
 
     const randomMessage = getRandomMessage();
