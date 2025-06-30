@@ -3,7 +3,7 @@ import usersData from "../../data/users.json";
 import UserListItem from "../userListItem/UserIistItem";
 import styles from "./UserList.module.css";
 
-function UserList() {
+function UserList({ onUserClick }) {
   const [users, setUsers] = useState(usersData);
 
   return (
@@ -13,7 +13,7 @@ function UserList() {
       </div>
       <div className={styles.usersListContainer}>
         {users.map((user) => (
-          <UserListItem key={user.id} user={user} />
+          <UserListItem key={user.id} user={user} onClick={onUserClick} />
         ))}
       </div>
     </div>

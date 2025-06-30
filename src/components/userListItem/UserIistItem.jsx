@@ -2,14 +2,14 @@ import { useMemo } from "react";
 import styles from "./UserListItem.module.css";
 import { getFormatTime } from "../../utils/getFormatTime";
 
-function UserListItem({ user }) {
+function UserListItem({ user, onClick }) {
   const formattedTime = useMemo(
     () => getFormatTime(user.lastMessageTime),
     [user.lastMessageTime]
   );
 
   return (
-    <div className={styles.userListItemContainer}>
+    <div className={styles.userListItemContainer} onClick={() => onClick(user)}>
       <img
         src={user.profilePic}
         alt={user.name}

@@ -5,10 +5,20 @@ import styles from "./App.module.css";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState("userList");
+  const [selectedUser, setSelectedUser] = useState(null);
+
+  const handleUserSelect = (user) => {
+    setSelectedUser(user);
+    setCurrentScreen("chat");
+  };
 
   return (
     <div className={styles.appConatiner}>
-      {currentScreen === "userList" ? <UserList /> : <Chat />}
+      {currentScreen === "userList" ? (
+        <UserList onUserClick={handleUserSelect} />
+      ) : (
+        <Chat user={selectedUser} />
+      )}
     </div>
   );
 }
