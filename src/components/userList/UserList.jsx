@@ -1,6 +1,6 @@
 import { useState } from "react";
-import usersData from "../data/users.json";
-import UserListItem from "./UserIistItem";
+import usersData from "../../data/users.json";
+import UserListItem from "../userListItem/UserIistItem";
 import styles from "./UserList.module.css";
 
 function UserList() {

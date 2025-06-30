@@ -1,6 +1,6 @@
 import { useState } from "react";
-import UserList from "./components/UserList";
-import Chat from "./components/Chat";
+import UserList from "./components/userList/UserList";
+import Chat from "./components/chat/Chat";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState("userList");
