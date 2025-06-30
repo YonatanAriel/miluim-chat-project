@@ -47,7 +47,9 @@ function Chat({ handleBackButtonClick, user }) {
 
     const randomMessage = getRandomMessage();
     setTimeout(() => {
-      setMessages((prev) => [...prev, randomMessage]);
+      const updatedMessages = [...messages, userMessage, randomMessage];
+      setMessages(updatedMessages);
+      saveMessagesToLS(updatedMessages);
     }, 1000 + Math.random() * 2000);
   };
 
