@@ -1,13 +1,30 @@
 import styles from "./Chat.module.css";
 import BackButton from "../backButton/BackButton";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Message from "../message/Message";
 import MessageInput from "../messageInput/MessageInput";
+import { scrollToBottom } from "../../utils/scrollToBottom";
 
 function Chat({ handleBackButtonClick }) {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
-  const sendMessage = () => {};
+  const messagesBottomRef = useRef(null);
+
+  useEffect(() => {
+    scrollToBottom(messagesBottomRef);
+  }, [messages]);
+
+  const sendMessage = () => {
+    if (newMessage.trim() === "") return;
+
+    const userMessage = {
+      id: Date.now(),
+      text: newMessage,
+      sender: "me",
+      timestamp: new Date().toISOString(),
+    };
+    setMessages((prev) => [...prev, userMessage]);
+  };
 
   return (
     <div className={styles.container}>
@@ -18,6 +35,7 @@ function Chat({ handleBackButtonClick }) {
         {messages.map((message) => (
           <Message message={message} />
         ))}
+        <div ref={messagesBottomRef} />
       </div>
       <MessageInput
         newMessage={newMessage}
