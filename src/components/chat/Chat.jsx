@@ -2,9 +2,12 @@ import styles from "./Chat.module.css";
 import BackButton from "../backButton/BackButton";
 import { useState } from "react";
 import Message from "../message/Message";
+import MessageInput from "../messageInput/MessageInput";
 
 function Chat({ handleBackButtonClick }) {
   const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState("");
+  const sendMessage = () => {};
 
   return (
     <div className={styles.container}>
@@ -15,8 +18,12 @@ function Chat({ handleBackButtonClick }) {
         {messages.map((message) => (
           <Message message={message} />
         ))}
-        <div />
       </div>
+      <MessageInput
+        newMessage={newMessage}
+        setNewMessage={setNewMessage}
+        sendMessage={sendMessage}
+      />
     </div>
   );
 }
