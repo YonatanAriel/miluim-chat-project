@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className={styles.appConatiner}>
+    <div className={styles.appContainer}>
       {currentScreen === "userList" ? (
         <UserList onUserClick={handleUserSelect} />
       ) : (
