@@ -38,8 +38,8 @@
 }
 @media screen and (max-width: 550px) {
   .container {
-    max-height: 100vh;
-    height: 100vh;
+    /* max-height: 100vh; */
+    height: 100svh;
     width: 100%;
     min-width: unset;
     margin: 0 auto;
