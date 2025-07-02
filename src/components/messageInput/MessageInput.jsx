@@ -19,7 +19,7 @@ function MessageInput({ newMessage, setNewMessage, sendMessage }) {
         placeholder="הודעה חדשה"
       />
       <button className={styles.inputButton} onClick={sendMessage}>
-        <IoSend size={20} />{" "}
+        <IoSend size={20} color="white" />{" "}
       </button>
     </div>
   );

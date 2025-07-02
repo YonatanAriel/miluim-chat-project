@@ -4,7 +4,7 @@ import styles from "./BackButton.module.css";
 function BackButton({ onClick }) {
   return (
     <button className={styles.backButton} onClick={onClick}>
-      <IoMdArrowRoundBack />
+      <IoMdArrowRoundBack color="white" />
     </button>
   );
 }
