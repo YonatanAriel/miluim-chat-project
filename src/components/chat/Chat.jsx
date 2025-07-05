@@ -5,6 +5,7 @@ import Message from "../message/Message";
 import MessageInput from "../messageInput/MessageInput";
 import { scrollToBottom } from "../../utils/scrollToBottom";
 import { getRandomMessage } from "../../utils/getRandomMessages";
+import Hamburger from "../hamburger/hamburger";
 
 function Chat({ handleBackButtonClick, user }) {
   const [messages, setMessages] = useState([]);
@@ -63,6 +64,7 @@ function Chat({ handleBackButtonClick, user }) {
           className={styles.userProfilePic}
         />
         <h2>{user.name}</h2>
+        <Hamburger />
       </div>
       <div className={styles.messagesContainer}>
         {messages.map((message) => (

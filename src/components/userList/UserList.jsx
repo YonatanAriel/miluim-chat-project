@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import usersData from "../../data/users.json";
 import UserListItem from "../userListItem/UserIistItem";
 import styles from "./UserList.module.css";
+import Hamburger from "../hamburger/hamburger";
 
 function UserList({ onUserClick }) {
   const [users, setUsers] = useState([]);
@@ -21,6 +22,7 @@ function UserList({ onUserClick }) {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.heading}>(: הצ'אט </h1>
+        <Hamburger />
       </div>
       <div className={styles.usersListContainer}>
         {users.map((user) => (
