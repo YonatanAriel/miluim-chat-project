@@ -1,0 +1,48 @@
+.menu {
+  background: none;
+  border-radius: 8px;
+  z-index: 9999;
+  transition: opacity 0.4s ease-in-out;
+  height: calc(100vh - 1rem);
+  margin: 1rem auto 0;
+  width: 450px;
+  backdrop-filter: blur(30px);
+  opacity: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.menu.open {
+  opacity: 1;
+}
+
+.menuHeader {
+  padding: 1rem;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuItem {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  color: white;
+  border-bottom: 1px solid white;
+  text-align: right;
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 550px) {
+  .menu {
+    height: 100svh;
+    width: 100%;
+  }
+}
