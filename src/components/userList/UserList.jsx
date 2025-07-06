@@ -3,18 +3,13 @@ import usersData from "../../data/users.json";
 import UserListItem from "../userListItem/UserIistItem";
 import styles from "./UserList.module.css";
 import Hamburger from "../hamburger/hamburger";
+import { getUpdatedUsers } from "../../utils/getUpdatedUsers";
 
 function UserList({ onUserClick }) {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const savedTimes = JSON.parse(
-      localStorage.getItem("lastMessageTimes") || "{}"
-    );
-    const updatedUsers = usersData.map((user) => ({
-      ...user,
-      lastMessageTime: savedTimes[user.id] || user.lastMessageTime,
-    }));
+    const updatedUsers = getUpdatedUsers(usersData);
     setUsers(updatedUsers);
   }, []);
 
