@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import usersData from "../../data/users.json";
 import UserListItem from "../userListItem/UserIistItem";
 import styles from "./UserList.module.css";
-import Hamburger from "../hamburger/hamburger";
+import Hamburger from "../hamburger/Hamburger";
 import { getUpdatedUsers } from "../../utils/getUpdatedUsers";
 
 function UserList({ onUserClick }) {

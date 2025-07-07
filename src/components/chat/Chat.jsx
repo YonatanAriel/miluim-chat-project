@@ -5,7 +5,7 @@ import Message from "../message/Message";
 import MessageInput from "../messageInput/MessageInput";
 import { scrollToBottom } from "../../utils/scrollToBottom";
 import { getRandomMessage } from "../../utils/getRandomMessages";
-import Hamburger from "../hamburger/hamburger";
+import Hamburger from "../hamburger/Hamburger";
 
 function Chat({ handleBackButtonClick, user }) {
   const [messages, setMessages] = useState([]);
