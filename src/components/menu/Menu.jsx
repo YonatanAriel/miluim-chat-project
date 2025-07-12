@@ -21,7 +21,7 @@ function Menu({ toggleMenu }) {
 
   return createPortal(
     <>
-      <div className={styles.overlay} onClick={handleClose}></div>
+      <div onClick={handleClose}></div>
       <div className={menuClass}>
         <div className={styles.menuHeader}>
           <button className={styles.closeButton} onClick={handleClose}>
